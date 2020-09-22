@@ -1,23 +1,28 @@
 import React from "react";
-import "./App.css";
+
+import Form from "./components/form";
+import TodoList from "./components/todos-list";
+import Filter from "./components/filter";
+
+import SearchCep from "./components/search-cep";
 
 function App() {
   return (
-    <div>
-      <input type="text" />
-
-      <ul>
-        <li style={{ textDecoration: "line-through" }}>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-        <li>Item 4</li>
-        <li>Item 5</li>
-      </ul>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "space-around",
+        padding: 30,
+      }}
+    >
+      <div>
+        <Form />
+        <TodoList />
+        <Filter />
+      </div>
 
       <div>
-        <h3>Mostrar</h3>
-        <span>Todos</span> | <a href="/">Finalizados</a> |
-        <a href="/">A fazer</a>
+        <SearchCep />
       </div>
     </div>
   );
